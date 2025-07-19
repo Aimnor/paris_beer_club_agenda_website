@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ProfessionnalsViewer } from "./professionnals-viewer/professionnals-viewer";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ProfessionnalsViewer, ProfessionnalsViewer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
