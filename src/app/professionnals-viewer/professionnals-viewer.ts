@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Professional } from './professional.model';
 import { ProfessionalsService } from './professionnal.service';
 import { Observable } from 'rxjs';
+import { ProfessionnalViewer } from './professionnal-viewer';
 
 @Component({
   selector: 'app-professionnals-viewer',
-  imports: [],
+  imports: [ProfessionnalViewer],
   templateUrl: './professionnals-viewer.html',
   styleUrl: './professionnals-viewer.css'
 })

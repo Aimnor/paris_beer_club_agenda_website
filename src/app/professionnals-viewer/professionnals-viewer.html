@@ -1,13 +1,13 @@
 <body>
     <div class="professionnals subscribed">
         @for (professional of findSubscribed(professionals); track professional.name) {
-        <div class="professional" ngFor>{{capitalizeFirstLetter(professional.display_name)}}</div>
+        <app-professionnal-viewer [professional]="professional" />
         }
     </div>
 
     <div class="professionnals unsubscribed">
         @for (professional of findNotSubscribed(professionals); track professional.name) {
-        <div class="professional" ngFor>{{capitalizeFirstLetter(professional.display_name)}}</div>
+        <app-professionnal-viewer [professional]="professional" />
         }
     </div>
 </body>
