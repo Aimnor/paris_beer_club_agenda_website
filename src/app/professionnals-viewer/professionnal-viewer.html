@@ -1,16 +1,8 @@
 <div (click)="toggleSection()">{{professional.display_name}}</div>
-@if(isSectionOpen) {<div>
-    @if (professional.page_type){<div class="elem">Type: {{professional.page_type}}</div>}
-    @if (professional.email){<div class="elem">Email: <a href="maito:{{professional.email}}">{{professional.email}}</a>
-    </div>}
-    @if (professional.phone){<div class="elem">Téléphone: {{professional.phone}}</div>}
-    @if (professional.address){<div class="elem">Adresse: <a
-            href="https://www.google.com/maps/search/?api=1&query={{professional.name}}, {{professional.address}}">{{professional.address}}</a>
-    </div>}
-    @if (professional.urls.length !=0){<div class="elem">
-        Sites:
-        @for (url of professional.urls; track $index) {
-        <div class="elem">- <a href="http://{{url}}">{{url}}</a></div>
-        }
-    </div>}
+@if(isSectionOpen) {<div class="section">
+    <app-field-viewer [type]="'Type'" [content]="professional.page_type" />
+    <app-field-viewer [type]="'Email'" [content]="professional.email" />
+    <app-field-viewer [type]="'Téléphone'" [content]="professional.phone" />
+    <app-field-viewer [type]="'Adresse'" [content]="professional.address" [name]="professional.name" />
+    <app-field-viewer [type]="'Sites'" [content]="professional.urls" [isLast]="true" />
 </div>}

@@ -1,0 +1,25 @@
+.section {
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.type {
+    border-style: solid;
+    display: flex;
+    width: 25%;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+
+.content {
+    border-style: solid;
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    border-bottom-style: none;
+}
+
+.isLast {
+    border-bottom-style: solid;
+}

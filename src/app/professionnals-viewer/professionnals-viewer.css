@@ -10,5 +10,6 @@ body {
   display: flex;
   flex-direction: column;
   border: 10px solid #bd4888;
+  border-radius: 2%;
   width: 100%;
 }

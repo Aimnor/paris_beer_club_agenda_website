@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { Professional } from './professional.model';
+import { FieldViewer } from './field-viewer';
 
 @Component({
   selector: 'app-professionnal-viewer',
-  imports: [],
+  imports: [FieldViewer],
   styleUrl: './professionnal-viewer.css',
   templateUrl: './professionnal-viewer.html',
-
 })
 
 export class ProfessionnalViewer {
@@ -26,4 +26,4 @@ export class ProfessionnalViewer {
   capitalizeFirstLetter(str: string): string {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
-}
+};
