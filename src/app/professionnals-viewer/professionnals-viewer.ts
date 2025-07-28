@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
   templateUrl: './professionnals-viewer.html',
   styleUrl: './professionnals-viewer.css'
 })
+
 export class ProfessionnalsViewer {
   professionals: Professional[] = [];
 
@@ -21,5 +22,15 @@ export class ProfessionnalsViewer {
       error: (e) => console.error(e),
       complete: () => console.info('complete')
     })
+  }
+
+  findSubscribed(professionals: Professional[]): Professional[] {
+    return professionals.filter(p => p.subscribed).sort((a, b) => (a.name < b.name ? -1 : 1));
+  }
+  findNotSubscribed(professionals: Professional[]): Professional[] {
+    return professionals.filter(p => !p.subscribed).sort((a, b) => (a.name < b.name ? -1 : 1));
+  }
+  capitalizeFirstLetter(str: string): string {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 }
