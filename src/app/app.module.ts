@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { App } from './app'; // Import your root component
 import { routes } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
-import { CalendarViewer } from './professionnals-viewer/calendar-viewer';
+import { CalendarViewer } from './calendar-viewer/calendar-viewer';
 import { ProfessionnalsViewer } from './professionnals-viewer/professionnals-viewer';
 import { FieldViewer } from './professionnals-viewer/field-viewer';
 import { DayPilotModule } from "@daypilot/daypilot-lite-angular";
