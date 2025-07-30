@@ -2,11 +2,11 @@ import { Component, Input } from "@angular/core";
 import { DayPilot } from "@daypilot/daypilot-lite-angular";
 
 @Component({
-  selector: 'calendar-component',
+  selector: 'app-calendar-viewer',
   template: `<daypilot-calendar [config]="config" [events]="events"></daypilot-calendar>>`,
   standalone: false
 })
-export class CalendarComponent {
+export class CalendarViewer {
 
   @Input() events: DayPilot.EventData[] = [];
 
