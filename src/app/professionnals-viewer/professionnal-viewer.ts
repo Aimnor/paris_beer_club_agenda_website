@@ -3,7 +3,6 @@ import { Professional } from './professional.model';
 
 @Component({
   selector: 'app-professionnal-viewer',
-  styleUrl: './professionnal-viewer.css',
   templateUrl: './professionnal-viewer.html',
   standalone: false
 })
