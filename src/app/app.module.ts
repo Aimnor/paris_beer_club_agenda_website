@@ -1,5 +1,5 @@
 import { importProvidersFrom, provideBrowserGlobalErrorListeners, provideZoneChangeDetection, NgModule } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, RouterOutlet } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { App } from './app'; // Import your root component
 import { routes } from './app.routes';
@@ -9,11 +9,15 @@ import { ProfessionnalsViewer } from './professionnals-viewer/professionnals-vie
 import { FieldViewer } from './professionnals-viewer/field-viewer';
 import { DayPilotModule } from "@daypilot/daypilot-lite-angular";
 import { ProfessionnalViewer } from './professionnals-viewer/professionnal-viewer';
+import { CalendarApp } from './calendar';
+import { ProfessionalsApp } from './professionnals';
 
 @NgModule({
     declarations: [
         App,
+        CalendarApp,
         CalendarViewer,
+        ProfessionalsApp,
         ProfessionnalViewer,
         ProfessionnalsViewer,
         FieldViewer
@@ -21,7 +25,8 @@ import { ProfessionnalViewer } from './professionnals-viewer/professionnal-viewe
     imports: [
         BrowserModule,
         DayPilotModule,
-        HttpClientModule
+        HttpClientModule,
+        RouterOutlet
     ],
     providers: [
         provideBrowserGlobalErrorListeners(),
@@ -29,7 +34,7 @@ import { ProfessionnalViewer } from './professionnals-viewer/professionnal-viewe
         provideRouter(routes),
         importProvidersFrom(HttpClientModule)
     ],
-    bootstrap: [App]
+    bootstrap: [App, CalendarApp, ProfessionalsApp]
 })
 export class AppModule {
 

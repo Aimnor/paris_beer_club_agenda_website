@@ -1,8 +1,15 @@
-<main class="main">
+<!-- <main class="main">
   <div class="content">
     <app-professionnals-viewer [professionals]="professionals" />
   </div>
   <div>
     <app-calendar-viewer [events]="events" />
   </div>
-</main>
+</main> -->
+<ul>
+  <li><a target="_blank" href="/professionnals" routerLinkActive="active" ariaCurrentWhenActive="page"
+      data-text="Professionals">Professionals</a></li>
+  <li><a target="_blank" href="/calendar" routerLinkActive="active" ariaCurrentWhenActive="page"
+      data-text="Calendar">Calendar</a></li>
+</ul>
+<router-outlet />

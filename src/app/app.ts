@@ -6,7 +6,8 @@ import { DayPilot } from '@daypilot/daypilot-lite-angular';
 @Component({
   selector: 'app-root',
   standalone: false,
-  templateUrl: './app.html'
+  templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('beer_agenda_website');
