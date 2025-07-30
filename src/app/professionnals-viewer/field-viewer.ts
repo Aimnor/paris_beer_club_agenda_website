@@ -1,16 +1,14 @@
-import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-field-viewer',
-  imports: [NgClass],
-  standalone: true,
+  standalone: false,
   styleUrl: './field-viewer.css',
   template: `
     @if (hasContent){
       <div class="section">
-      <div [ngClass]="{'type': true, 'isLast': isLast}">{{type}}</div>
-      @if (isString){<div [ngClass]="{'content': true, 'isLast': isLast}">
+      <div class="type">{{type}}</div>
+      @if (isString){<div class="content">
         @if(type === "Email"){
           <a href="maito:{{content}}">{{content}}</a>
         }
@@ -21,7 +19,7 @@ import { Component, Input } from '@angular/core';
         </div>
       }
       @else {
-        <div [ngClass]="{'content': true, 'isLast': isLast}">
+        <div class="content">
           @for (line of content; track $index) {
           <div>
             - 
@@ -43,7 +41,6 @@ export class FieldViewer {
   @Input() type: string = "";
   @Input() content?: string | Array<string>;
   @Input() name?: string = "";
-  @Input() isLast?: boolean = false;
 
   hasContent: boolean = false;
   isString: boolean = true;

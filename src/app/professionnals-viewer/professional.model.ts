@@ -1,3 +1,5 @@
+import { DayPilot } from "@daypilot/daypilot-lite-angular";
+
 export class Event {
     address: string = "";
     date: string = "";

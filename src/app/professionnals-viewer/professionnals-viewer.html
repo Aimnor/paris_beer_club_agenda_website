@@ -1,13 +1,19 @@
 <body>
-    <div class="professionnals subscribed">
-        @for (professional of findSubscribed(professionals); track professional.name) {
-        <app-professionnal-viewer [professional]="professional" />
-        }
+    <div class="up">
+        <div class="professionnals subscribed">
+            @for (professional of findSubscribed(); track professional.name) {
+            <app-professionnal-viewer [professional]="professional" />
+            }
+        </div>
+
+        <div class="professionnals unsubscribed">
+            @for (professional of findNotSubscribed(); track professional.name) {
+            <app-professionnal-viewer [professional]="professional" />
+            }
+        </div>
     </div>
 
-    <div class="professionnals unsubscribed">
-        @for (professional of findNotSubscribed(professionals); track professional.name) {
-        <app-professionnal-viewer [professional]="professional" />
-        }
+    <div>
+        <calendar-component [events]="getEvents()" />
     </div>
 </body>

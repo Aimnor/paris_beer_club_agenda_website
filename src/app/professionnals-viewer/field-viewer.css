@@ -19,7 +19,3 @@
     flex-direction: column;
     border-bottom-style: none;
 }
-
-.isLast {
-    border-bottom-style: solid;
-}

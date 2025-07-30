@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Professional } from './professional.model';
-import { FieldViewer } from './field-viewer';
 
 @Component({
   selector: 'app-professionnal-viewer',
-  imports: [FieldViewer],
   styleUrl: './professionnal-viewer.css',
   templateUrl: './professionnal-viewer.html',
+  standalone: false
 })
 
 export class ProfessionnalViewer {

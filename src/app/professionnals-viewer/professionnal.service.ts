@@ -12,7 +12,7 @@ export class ProfessionalsService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<Professional[]> {
+  getProfessionnals(): Observable<Professional[]> {
     return this.http.get<Professional[]>(this.apiUrl);
   }
 }
