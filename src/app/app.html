@@ -1,5 +1,8 @@
 <main class="main">
   <div class="content">
-    <app-professionnals-viewer />
+    <app-professionnals-viewer [professionals]="professionals" />
+  </div>
+  <div>
+    <calendar-component [events]="getEvents()" />
   </div>
 </main>
