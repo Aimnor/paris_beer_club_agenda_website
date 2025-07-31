@@ -9,15 +9,11 @@ import { ProfessionnalsViewer } from './professionnals-viewer/professionnals-vie
 import { FieldViewer } from './professionnals-viewer/field-viewer';
 import { DayPilotModule } from "@daypilot/daypilot-lite-angular";
 import { ProfessionnalViewer } from './professionnals-viewer/professionnal-viewer';
-import { CalendarApp } from './calendar';
-import { ProfessionalsApp } from './professionnals';
 
 @NgModule({
     declarations: [
         App,
-        CalendarApp,
         CalendarViewer,
-        ProfessionalsApp,
         ProfessionnalViewer,
         ProfessionnalsViewer,
         FieldViewer
@@ -34,7 +30,7 @@ import { ProfessionalsApp } from './professionnals';
         provideRouter(routes),
         importProvidersFrom(HttpClientModule)
     ],
-    bootstrap: [App, CalendarApp, ProfessionalsApp]
+    bootstrap: [App]
 })
 export class AppModule {
 

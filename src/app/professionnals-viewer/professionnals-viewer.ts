@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Professional } from './professional.model';
+import { ProfessionalsService } from './professionnal.service';
 
 @Component({
   selector: 'app-professionnals-viewer',
@@ -9,6 +10,15 @@ import { Professional } from './professional.model';
 })
 
 export class ProfessionnalsViewer {
-  @Input() professionals: Professional[] = [];
+  professionals: Professional[] = [];
+
+  constructor(private ps: ProfessionalsService) {
+  }
+  ngOnInit() {
+    this.ps.$professionals.subscribe(value => {
+      this.professionals = value;
+    });
+    this.ps.fetchData()
+  }
 }
 

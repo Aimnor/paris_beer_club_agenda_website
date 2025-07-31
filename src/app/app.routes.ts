@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { CalendarApp } from './calendar';
-import { App } from './app';
-import { ProfessionalsApp } from './professionnals';
+import { HomeApp } from './home';
+import { CalendarViewer } from './calendar-viewer/calendar-viewer';
+import { ProfessionnalsViewer } from './professionnals-viewer/professionnals-viewer';
 
 export const routes: Routes = [
-    { path: "", component: App },
-    { path: "calendar", component: CalendarApp },
-    { path: "professionnals", component: ProfessionalsApp }
+    { path: "", component: HomeApp },
+    { path: "calendar", component: CalendarViewer },
+    { path: "professionnals", component: ProfessionnalsViewer }
 ];

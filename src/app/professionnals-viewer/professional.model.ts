@@ -12,7 +12,7 @@ export class Professional {
     phone: string = "";
     address: string = "";
     urls: string[] = [];
-    page_type: string = "";
+    types: string[] = [];
     subscribed: boolean = false;
     events: Event[] = [];
     relative_url: string = "";

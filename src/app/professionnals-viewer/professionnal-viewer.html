@@ -1,6 +1,6 @@
 <div (click)="toggleSection()">{{professional.display_name}}</div>
 @if(isSectionOpen) {<div class="section">
-    <app-field-viewer [type]="'Type'" [content]="professional.page_type" />
+    <app-field-viewer [type]="'Catégories'" [content]="professional.types" />
     <app-field-viewer [type]="'Email'" [content]="professional.email" />
     <app-field-viewer [type]="'Téléphone'" [content]="professional.phone" />
     <app-field-viewer [type]="'Adresse'" [content]="professional.address" [name]="professional.name" />
